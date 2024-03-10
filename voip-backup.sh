@@ -12,7 +12,7 @@ tar -czvf freepbx_backup_$(date +%Y%m%d_%H%M%S).tar.gz \
     /etc/zabbix \
     /etc/pki
 
-# Backup FreePBX MySQL databases with maximum compression
+# Backup FreePBX MySQL databases 
 mysqldump -u root --all-databases --add-drop-database --add-drop-table | gzip > all_databases_backup_$(date +%Y%m%d_%H%M%S).sql.gz
 
 echo "Backup completed successfully!"
